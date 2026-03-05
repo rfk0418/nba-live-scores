@@ -1,7 +1,7 @@
 const API_KEY = "bf7b52a8-b4de-40bf-bf89-0b4fc699306c";
 
 async function getScores() {
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toLocaleDateString("en-CA");
 
   const response = await fetch(
     `https://api.balldontlie.io/v1/games?dates[]=${today}`,
